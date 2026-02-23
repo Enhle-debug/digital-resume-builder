@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Professional ATS Resume Builder</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+<div class="form-section">
+<h2>Resume Builder</h2>
+
+<label>Full Name</label>
+<input type="text" id="name">
+
+<label>Professional Title</label>
+<input type="text" id="title">
+
+<label>Email</label>
+<input type="email" id="email">
+
+<label>Phone</label>
+<input type="text" id="phone">
+
+<label>Location</label>
+<input type="text" id="location">
+
+<label>
+<input type="checkbox" id="toggleLinkedin">
+ Include LinkedIn URL
+</label>
+<div id="linkedinField" style="display:none;">
+<input type="text" id="linkedin" placeholder="https://linkedin.com/in/yourname">
+</div>
+
+<label class="github-toggle">
+  <input type="checkbox" id="toggleGithub">
+  Include GitHub Link
+</label>
+<div id="githubField" style="display:none;">
+<input type="text" id="github" placeholder="https://github.com/yourusername">
+</div>
+
+<label>Professional Summary</label>
+<textarea id="summary"></textarea>
+
+<label>Soft Skills (comma separated)</label>
+<input type="text" id="skills">
+
+<label>
+<input type="checkbox" id="toggleTechSkills">
+ Include Tech Skills
+</label>
+<div id="techSkillsField" style="display:none;">
+<label>Tech Skills (comma separated)</label>
+<input type="text" id="techSkills">
+</div>
+
+<h3>Education</h3>
+<div id="educationContainer"></div>
+<button type="button" id="addEducation">Add Education</button>
+
+<div class="section-header-row">
+<h3>Work Experience</h3>
+<label class="inline-checkbox"><input type="checkbox" id="toggleWork" checked> Include Work Experience</label>
+</div>
+<div id="workSection">
+<div id="experienceContainer"></div>
+<button type="button" id="addExperience">Add Experience</button>
+</div>
+
+<div class="section-header-row">
+<h3>Projects</h3>
+<label class="inline-checkbox"><input type="checkbox" id="toggleProjects"> Include Projects</label>
+</div>
+<div id="projectSection" style="display:none;">
+<div id="projectsContainer"></div>
+<button type="button" id="addProject">Add Project</button>
+</div>
+
+<div class="section-header-row">
+<h3>Certificates</h3>
+<label class="inline-checkbox"><input type="checkbox" id="toggleCertificates"> Include Certificates</label>
+</div>
+<div id="certificatesField" style="display:none;">
+<div id="certificatesContainer"></div>
+<button type="button" id="addCertificate">Add Certificate</button>
+</div>
+
+<h3>References</h3>
+<textarea id="references" placeholder="Available upon request or add contact details"></textarea>
+
+<button type="button" onclick="downloadPDF()">Download PDF</button>
+
+</div>
+
+<div class="preview-wrapper">
+<div class="resume-preview">
+
+<h1 id="previewName">Your Name</h1>
+<h2 id="previewTitle">PROFESSIONAL TITLE</h2>
+
+<p class="contact">
+<span id="previewEmail"></span> |
+<span id="previewPhone"></span> |
+<span id="previewLocation"></span>
+<span id="previewLinkedin"></span>
+<span id="previewGithub"></span>
+</p>
+
+<h3>Professional Summary</h3>
+<p id="previewSummary"></p>
+
+<h3>Soft Skills</h3>
+<ul id="previewSkills"></ul>
+
+<div id="techSkillsSection" style="display:none;">
+<h3>Tech Skills</h3>
+<ul id="previewTechSkills"></ul>
+</div>
+
+<h3>Education</h3>
+<div id="previewEducation"></div>
+
+<div id="workSection-preview">
+<h3>Work Experience</h3>
+<div id="previewExperience"></div>
+</div>
+
+<div id="projectSection-preview" style="display:none;">
+<h3>Projects</h3>
+<div id="previewProjects"></div>
+</div>
+
+<div id="certificatesSection" style="display:none;">
+<h3>Certificates</h3>
+<div id="previewCertificates"></div>
+</div>
+
+<h3>References</h3>
+<p id="previewReferences"></p>
+
+</div>
+</div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
