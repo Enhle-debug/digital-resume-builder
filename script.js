@@ -93,6 +93,25 @@ githubInput.addEventListener("input", () => {
   previewGithub.textContent = githubInput.value ? " | GitHub: " + githubInput.value : "";
 });
 
+// PORTFOLIO
+const togglePortfolio = document.getElementById("togglePortfolio");
+const portfolioField = document.getElementById("portfolioField");
+const portfolioInput = document.getElementById("portfolio");
+const previewPortfolio = document.getElementById("previewPortfolio");
+
+togglePortfolio.addEventListener("change", () => {
+  portfolioField.style.display = togglePortfolio.checked ? "block" : "none";
+  previewPortfolio.style.display = togglePortfolio.checked ? "inline" : "none";
+  localStorage.setItem("togglePortfolio", togglePortfolio.checked);
+  if(!togglePortfolio.checked){
+    previewPortfolio.textContent = "";
+  }
+});
+
+portfolioInput.addEventListener("input", () => {
+  previewPortfolio.textContent = portfolioInput.value ? " | Portfolio: " + portfolioInput.value : "";
+});
+
 // SOFT SKILLS BULLET FORMAT
 skillsInput.addEventListener("input", () => {
   previewSkills.innerHTML = "";
