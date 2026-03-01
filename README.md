@@ -49,7 +49,7 @@ This resume builder follows ATS best practices:
 
 ## 🌍 Live Demo
 
-(After deploying, add your GitHub Pages link here)
+https://enhle-debug.github.io/digital-resume-builder/
 
 ---
 
