@@ -146,6 +146,12 @@ margin-bottom: 20px;
 display: block;
 }
 
+/* Spacing between Portfolio toggle and Professional Summary */
+.portfolio-toggle {
+margin-bottom: 20px;
+display: block;
+}
+
 /* Print / PDF page handling */
 @media print {
   .resume-preview {
