@@ -14,7 +14,6 @@ This project allows users to generate a clean, professional one-page resume and 
 - ATS-compliant formatting
 - Professional PDF export (Letter size)
 - Clean corporate layout
-- Single-column structure for ATS compatibility
 
 ---
 
@@ -34,7 +33,7 @@ This resume builder follows ATS best practices:
 - No tables
 - No icons
 - No images
-- Single column layout
+- Columns layout
 - Standard fonts (Arial / Helvetica)
 - Clean heading structure
 - Proper margins (8.5 x 11 Letter format)
